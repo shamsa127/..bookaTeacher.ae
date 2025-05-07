@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookATeacher.ae | UAE Tutoring Made Easy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #C9E4DE;
+      color: #333;
+      direction: ltr;
+    }
+
+    header {
+      background: #FAEDCB;
+      text-align: center;
+      padding: 40px 20px 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      position: relative;
+    }
+
+    .lang-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .lang-buttons button {
+      padding: 8px 15px;
+      margin-left: 10px;
+      background-color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin: 0;
+    }
+
+    .quote {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #007B5E, #009688);
+      color: white;
+      padding: 10px 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .intro {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .intro img {
+      width: 40px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+
+    .btn {
+      background: #FAEDCB;
+      color: #222;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffe7a8;
+      transform: scale(1.05);
+    }
+
+    .features {
+      max-width: 1000px;
+      margin: 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .feature {
+      flex: 1 1 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
+      background-color: #f8f8f8;
+    }
+
+    .feature h3 {
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #FAEDCB;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="lang-buttons">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ar')">العربية</button>
+    </div>
+    <h1 id="title">Welcome to BookATeacher.ae</h1>
+    <div class="quote" id="motto">المستحيل ليس إماراتياً</div>
+  </header>
+
+  <section class="intro">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE Flag" />
+    <p id="subtitle">Book certified tutors by subject across the UAE — fast, reliable, and trusted.</p>
+    <a href="https://bookateacher.ae" target="_blank" class="btn" id="visitBtn">Visit Main Website</a>
+  </section>
+
+  <section class="features" id="infoSection">
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/classroom.png" alt="Subjects">
+      <h3>All Subjects</h3>
+      <p>Math, English, Arabic, Science and more taught by certified experts.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/teacher.png" alt="Verified Tutors">
+      <h3>Verified Tutors</h3>
+      <p>Handpicked, reviewed, and trusted UAE-based private teachers.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/smartphone-tablet.png" alt="Online Booking">
+      <h3>Book Anytime</h3>
+      <p>Book online or in-person tutoring in just a few taps.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/clock--v1.png" alt="Flexible Time">
+      <h3>Flexible Scheduling</h3>
+      <p>Lessons scheduled around your time, your needs, your pace.</p>
+    </div>
+  </section>
+
+  <footer id="footerText">&copy; 2025 BookATeacher.ae – Made with ❤️ in the UAE</footer>
+
+  <script>
+    const translations = {
+      en: {
+        dir: 'ltr',
+        title: 'Welcome to BookATeacher.ae',
+        motto: 'المستحيل ليس إماراتياً',
+        subtitle: 'Book certified tutors by subject across the UAE — fast, reliable, and trusted.',
+        visitBtn: 'Visit Main Website',
+        footer: '&copy; 2025 BookATeacher.ae – Made with ❤️ in the UAE'
+      },
+      ar: {
+        dir: 'rtl',
+        title: 'مرحبًا بكم في BookATeacher.ae',
+        motto: 'المستحيل ليس إماراتياً',
+        subtitle: 'احجز مدرسين معتمدين حسب المادة في الإمارات بسرعة وثقة.',
+        visitBtn: 'زيارة الموقع الرئيسي',
+        footer: '&copy; 2025 BookATeacher.ae – تم الإنشاء بحب ❤️ في الإمارات'
+      }
+    };
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      document.body.dir = t.dir;
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("motto").innerText = t.motto;
+      document.getElementById("subtitle").innerText = t.subtitle;
+      document.getElementById("visitBtn").innerText = t.visitBtn;
+      document.getElementById("footerText").innerHTML = t.footer;
+    }
+  </script>
+</body>
+</html>
